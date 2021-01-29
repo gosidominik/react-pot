@@ -37,7 +37,33 @@
   }
 }
 
-.tti {
+.container-tti {
   align-self: center;
   text-align: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.container-weight {
+  align-self: center;
+}
+
+.container-height {
+  align-self: center;
+}
+
+.sovány {
+  color: yellow;
+}
+
+.normál {
+  color: green;
+}
+
+.túlsúlyos {
+  color: red;
 }

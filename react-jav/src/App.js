@@ -1,19 +1,23 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { Weight } from "./Weight";
 import { Height } from "./Height";
 import { Result } from "./Result";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function App() {
-  const [height, setHeight] = useState(0);
-  const [weight, setWeight] = useState(0);
+  const [height, setHeight] = useState();
+  const [result, setResult] = useState();
+  const [weight, setWeight] = useState();
+
+  useEffect(() => {
+    setResult((weight / Math.pow(height / 100, 2)).toFixed(2));
+  }, [height, weight]);
 
   return (
     <div className="container">
-      <Weight weights={(weight, setWeight)} />
-      <Height height={height} />
-      <Result stats={(weight, height)} />
+      <Weight setWeight={setWeight} />
+      <Height setHeight={setHeight} />
+      <Result result={result} />
     </div>
   );
 }

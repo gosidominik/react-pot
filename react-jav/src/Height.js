@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Height = () => {
-  const [height, setHeight] = useState();
-
+export const Height = ({ setHeight }) => {
   return (
-    <div className="container">
+    <div className="container-height">
       <h3>Testmagasság (cm)</h3>
-      <input
-        type="text"
-        className="input-group"
-        value={height}
-        onChange={() => setHeight()}
-      />
+      <input onChange={(e) => setHeight(e.target.value)} />
     </div>
   );
 };

@@ -1,17 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Weight = () => {
-  const [weight, setWeight] = useState();
-
+export const Weight = ({ setWeight }) => {
   return (
-    <div className="container">
+    <div className="container-weight">
       <h3>Testtömeg (kg)</h3>
-      <input
-        type="text"
-        className="input-group"
-        value={weight}
-        onChange={() => setWeight()}
-      />
+      <input onChange={(e) => setWeight(e.target.value)} />
     </div>
   );
 };
