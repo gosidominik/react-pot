@@ -1,10 +1,10 @@
 import React from "react";
 
-export const Height = ({ setHeight }) => {
+export const Height = ({ setHeight,height }) => {
   return (
     <div className="container-height">
       <h3>Testmagasság (cm)</h3>
-      <input onChange={(e) => setHeight(e.target.value)} />
+      <input value={height} onChange={(e) => setHeight(e.target.value)} />
     </div>
   );
 };

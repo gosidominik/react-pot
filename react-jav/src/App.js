@@ -15,8 +15,8 @@ function App() {
 
   return (
     <div className="container">
-      <Weight setWeight={setWeight} />
-      <Height setHeight={setHeight} />
+      <Weight weight={weight} setWeight={setWeight} />
+      <Height height={height} setHeight={setHeight} />
       <Result result={result} />
     </div>
   );
